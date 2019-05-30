@@ -1,0 +1,345 @@
+@import url("https://fonts.googleapis.com/css?family=Lato:400,700,900");
+::-webkit-scrollbar {
+  width: 0px !important;
+  height: 10px;
+  border-radius: 100px;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  opacity: 0.5;
+  height: 35px !important;
+  border-radius: 100px;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "Lato", sans-serif;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.wrap {
+  float: left;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  background-image: url("data:image/svg+xml,%3Csvg width='52' height='26' viewBox='0 0 52 26' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23000000' fill-opacity='0.04'%3E%3Cpath d='M10 10c0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6h2c0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4v2c-3.314 0-6-2.686-6-6 0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6zm25.464-1.95l8.486 8.486-1.414 1.414-8.486-8.486 1.414-1.414z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+.wrap .screen {
+  background: #fff;
+  -webkit-box-shadow: 0px 0px 22px 0px rgba(148, 148, 148, 0.51);
+  -moz-box-shadow: 0px 0px 22px 0px rgba(148, 148, 148, 0.51);
+  box-shadow: 0px 0px 22px 0px rgba(148, 148, 148, 0.51);
+  height: 650px;
+  width: 350px;
+  border-radius: 40px;
+  overflow: hidden;
+  position: relative;
+  border: 3px solid #eee;
+}
+
+.homepage {
+  float: left;
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+}
+.homepage.close {
+  display: none;
+}
+
+.banner-image {
+  float: left;
+  width: 100%;
+  height: 250px;
+  background-position: center 75%;
+  background-size: 200%;
+  position: relative;
+}
+.banner-image:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100px;
+  left: 0;
+  bottom: 0px;
+  background: linear-gradient(rgba(255, 255, 255, 0), white);
+  z-index: 10;
+}
+
+.search {
+  float: left;
+  width: 80%;
+  position: absolute;
+  bottom: -10px;
+  padding: 10px 15px;
+  background: #fff;
+  border-radius: 40px;
+  left: 10%;
+  overflow: hidden;
+  z-index: 1000;
+  -webkit-box-shadow: 0px 0px 22px 0px rgba(148, 148, 148, 0.51);
+  -moz-box-shadow: 0px 0px 22px 0px rgba(148, 148, 148, 0.51);
+  box-shadow: 0px 0px 22px 0px rgba(148, 148, 148, 0.51);
+  transition: all 0.2s ease;
+  -webkit-transition: all 0.2s ease;
+}
+.search:hover, .search.focused {
+  -webkit-box-shadow: 0px 0px 12px 0px rgba(17, 17, 170, 0.51);
+  -moz-box-shadow: 0px 0px 12px 0px rgba(17, 17, 170, 0.51);
+  box-shadow: 0px 0px 12px 0px rgba(17, 17, 170, 0.51);
+}
+.search:hover i, .search.focused i {
+  color: #940000;
+}
+.search i {
+  transition: all 0.2s ease;
+  -webkit-transition: all 0.2s ease;
+  float: left;
+  padding: 5px;
+  font-size: 14pt;
+  color: #575757;
+}
+.search input {
+  border: 0px;
+  float: right;
+  width: calc(100% - 48px);
+  margin-top: 3px;
+  margin-right: 10px;
+  outline: 0px;
+  font-weight: 700;
+  font-size: 12pt;
+  color: #575757;
+  position: relative;
+  border-bottom: 2px solid rgba(0, 0, 0, 0);
+  transition: all 0.2s ease;
+  -webkit-transition: all 0.2s ease;
+}
+
+.heros {
+  float: left;
+  margin-top: 20px;
+  padding: 15px 5px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: flex-start;
+}
+.heros .hero {
+  flex: 1;
+  float: left;
+  padding: 10px;
+  min-width: 33.33%;
+  max-width: 33.33%;
+  position: relative;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.heros .hero:hover {
+  background: #eee;
+}
+.heros .hero p {
+  width: 100%;
+  text-align: center;
+  font-size: 8pt;
+  color: #575757;
+  font-weight: 800;
+  float: left;
+  margin: 0px;
+}
+.heros .icon {
+  clear: both;
+  float: left;
+  position: relative;
+  left: calc(50% - 25px);
+  background: url("https://res.cloudinary.com/teepublic/image/private/s--Asn9fY7h--/t_Preview/b_rgb:191919,c_limit,f_jpg,h_630,q_90,w_630/v1522832754/production/designs/2557697_0.jpg");
+  height: 50px;
+  width: 50px;
+  float: left;
+  overflow: hidden;
+  border-radius: 400px;
+  background-size: 280px;
+  filter: invert(100%);
+  opacity: 0.4;
+  z-index: 1;
+}
+
+.heropage {
+  float: left;
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+  position: relative;
+  display: none;
+}
+.heropage.open {
+  display: block;
+}
+.heropage .banner-image {
+  height: 500px;
+  background-size: cover;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.heropage .banner-image h1 {
+  flex: 1;
+  position: relative;
+  margin-top: 70px;
+  font-size: 50pt;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  line-height: 55pt;
+  font-weight: 800;
+  color: #fff;
+  text-align: center;
+  width: 100%;
+  float: left;
+}
+.heropage .banner-image h1 span {
+  float: left;
+  width: 100%;
+  line-height: 35pt;
+  text-transform: inherit;
+  font-size: 18pt;
+  letter-spacing: 4px;
+}
+.heropage .banner-image h1:before {
+  content: '';
+  position: absolute;
+  background: #eee;
+  width: 4px;
+  height: 150px;
+  top: calc(100% + 20px);
+  left: calc(50% - 2px);
+  z-index: 1000;
+  border-radius: 2px;
+}
+.heropage .info {
+  padding: 10px 10px;
+  float: left;
+  width: 100%;
+  margin: 20px 0px;
+  position: relative;
+}
+.heropage .info:after {
+  content: '';
+  position: absolute;
+  height: 2px;
+  width: 90px;
+  border-radius: 2px;
+  background: #575757;
+  left: calc(50% - 45px);
+  bottom: 0;
+}
+.heropage .info p {
+  font-size: 12pt;
+  line-height: 16pt;
+  color: #575757;
+  font-weight: 600;
+  position: relative;
+}
+.heropage .info p.quote {
+  text-align: center;
+  font-weight: 600;
+}
+.heropage .info .powers {
+  margin: 10px 0px 25px 0px;
+  float: left;
+  padding: 5px;
+  width: 100%;
+}
+.heropage .info .powers label {
+  float: left;
+  width: 100%;
+  margin: 10px 0px 5px 0px;
+  font-size: 10pt;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 800;
+  color: #575757;
+}
+.heropage .info .powers .power-bar {
+  float: left;
+  width: 100%;
+  margin: 0px 0px 5px 0px;
+  height: 10px;
+  border-radius: 3px;
+  overflow: hidden;
+  background: #eee;
+}
+.heropage .info .powers .power-bar div {
+  height: 100%;
+  float: left;
+  border-radius: 3px;
+  background: #940000;
+}
+.heropage .go-back {
+  padding: 0;
+  margin: 0px;
+  position: absolute;
+  color: #fff;
+  font-size: 25pt;
+  left: 15px;
+  top: 10px;
+  z-index: 100000;
+  cursor: pointer;
+  border-radius: 500px;
+  transition: all 0.2s ease;
+  -webkit-transition: all 0.2s ease;
+  -webkit-box-shadow: 0px 0px 22px 0px rgba(0, 0, 0, 0.51);
+  -moz-box-shadow: 0px 0px 22px 0px rgba(0, 0, 0, 0.51);
+  box-shadow: 0px 0px 22px 0px rgba(0, 0, 0, 0.51);
+}
+.heropage .go-back:hover {
+  color: #eee;
+  -webkit-box-shadow: 0px 0px 12px 0px rgba(148, 148, 148, 0.51);
+  -moz-box-shadow: 0px 0px 12px 0px rgba(148, 148, 148, 0.51);
+  box-shadow: 0px 0px 12px 0px rgba(148, 148, 148, 0.51);
+}
+
+.transition {
+  float: left;
+  width: calc(100% + 20px);
+  left: -10px;
+  position: absolute;
+  height: 100%;
+  background: rgba(0, 0, 0, 0);
+  z-index: 100000000000;
+  pointer-events: none;
+}
+.transition span {
+  width: 20%;
+  background: #1a1a1a;
+  float: left;
+  position: relative;
+  border-radius: 50px;
+  height: calc(100% + 100px);
+  top: calc(-100% - 100px);
+  transition: all 0.4s ease;
+  -webkit-transition: all 0.4s ease;
+  overflow: hidden;
+  mix-blend-mode: screen;
+  background-image: url("http://pluspng.com/img-png/avengers-logo-png-avengers-logo-png-1376.png");
+  background-size: auto 100%;
+  background-position: center;
+  background-attachment: fixed;
+}
+.transition span.show {
+  top: -50px;
+}
+.transition span.outDown {
+  top: calc(100% + 100px);
+}
